@@ -13,8 +13,7 @@ typedef vector<Shape*> Collection;
 
 bool sortByArea(Shape* first, Shape* second)
 {
-    if(first == NULL || second == NULL)
-    {
+    if(first == NULL || second == NULL) {
         return false;
     }
     return (first->getArea() < second->getArea());
@@ -22,8 +21,7 @@ bool sortByArea(Shape* first, Shape* second)
 
 bool perimeterBiggerThan20(Shape* s)
 {
-    if(s)
-    {
+    if(s) {
         return (s->getPerimeter() > 20);
     }
     return false;
