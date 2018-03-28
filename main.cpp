@@ -51,7 +51,7 @@ void printCollectionElements(const Collection& collection)
 
 void printAreas(const Collection& collection)
 {
-  for (const auto &it : collection)
+  for (const auto& it : collection)
   {
     if (it != nullptr)
     {
