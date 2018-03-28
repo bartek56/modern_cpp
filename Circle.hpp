@@ -8,8 +8,8 @@ class Circle final : public Shape
   Circle(double r);
   Circle(const Circle& other) = default;
   Circle(double r, Colors c);
-  double getArea() const override;
-  double getPerimeter() const override;
+  double getArea()  const noexcept override ;
+  double getPerimeter() const noexcept override ;
   double getRadius() const;
   void print() const override;
   Circle() = delete;
