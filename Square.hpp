@@ -9,6 +9,6 @@ class Square : public Rectangle
   Square(const Square& other) = default;
 
   double getArea() const override;
-  double getPerimeter()  const override;
+  double getPerimeter() const override;
   void print() const override;
 };

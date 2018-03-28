@@ -2,7 +2,7 @@
 
 #include "Shape.hpp"
 
-class Circle : public Shape
+class Circle final : public Shape
 {
  public:
   Circle(double r);
