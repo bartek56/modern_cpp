@@ -84,7 +84,8 @@ int main()
   shapes.push_back(new Rectangle(10.0, 5.0));
   shapes.push_back(new Square(3.0));
   shapes.push_back(new Circle(4.0));
-
+	cout << "align " << alignof(char) << endl;
+	cout << "align Circle " << alignof(Circle) << endl;
   printCollectionElements(shapes);
 
   cout << "Areas before sort: " << std::endl;
