@@ -51,11 +51,11 @@ void printCollectionElements(const Collection& collection)
 
 void printAreas(const Collection& collection)
 {
-  for (auto it = collection.begin(); it != collection.end(); ++it)
+  for (const auto &it : collection)
   {
-    if (*it != nullptr)
+    if (it != nullptr)
     {
-      cout << (*it)->getArea() << std::endl;
+      cout << (it)->getArea() << std::endl;
     }
   }
 }
