@@ -3,14 +3,11 @@
 
 Shape::Shape(Colors c)
 {
-	c = Colors::BLUE;
-	if(c==Colors::GREEN)
-	{
-					std::cout << "";
-	}
+  c = Colors::BLUE;
+  if (c == Colors::GREEN)
+  {
+    std::cout << "";
+  }
 }
 
-void Shape::print() const
-{
-    std::cout << "Unknown Shape" << std::endl;
-}
+void Shape::print() const { std::cout << "Unknown Shape" << std::endl; }
