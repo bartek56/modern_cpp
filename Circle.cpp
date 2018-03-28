@@ -2,7 +2,10 @@
 #include <math.h>
 #include <iostream>
 
-Circle::Circle(double r) : r_(r) {}
+Circle::Circle(double r) {
+r_=std::move(r);
+
+}
 double Circle::getArea() const noexcept { return M_PI * r_ * r_; }
 double Circle::getPerimeter() const noexcept { return 2 * M_PI * r_; }
 double Circle::getRadius() const { return r_; }

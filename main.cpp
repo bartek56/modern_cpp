@@ -76,14 +76,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection, bool (*predic
 
 int main()
 {
-  Collection shapes={
-		new Circle(2.0),
-		new Circle(3.0),
-		new Circle(4.0),
-		new Rectangle(10.0, 5.0),
-		new Square(3.0),
-		new Circle(4.0)
-	};
+  Collection shapes = {new Circle(2.0), new Circle(3.0), new Circle(4.0), new Rectangle(10.0, 5.0), new Square(3.0), new Circle(4.0)};
   cout << "align " << alignof(char) << endl;
   cout << "align Circle " << alignof(Circle) << endl;
   printCollectionElements(shapes);
