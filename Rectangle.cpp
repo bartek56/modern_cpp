@@ -1,10 +1,10 @@
 #include "Rectangle.hpp"
 #include <iostream>
 
-Rectangle::Rectangle(double x, double y) {
-x_=std::move(x);
-y_=std::move(y);
-
+Rectangle::Rectangle(double x, double y)
+{
+  x_ = std::move(x);
+  y_ = std::move(y);
 }
 double Rectangle::getArea() const { return x_ * y_; }
 double Rectangle::getPerimeter() const { return 2 * (x_ + y_); }
