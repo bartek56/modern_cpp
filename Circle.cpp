@@ -2,10 +2,15 @@
 #include <math.h>
 #include <iostream>
 
-Circle::Circle(double r)
+Circle::Circle(double r):Circle(r, Colors::BLUE)
 {
   r_ = std::move(r);
 }
+
+Circle::Circle(double r, Colors c)
+				 : Shape(c), r_(r)
+{}
+
 double Circle::getArea() const noexcept
 {
   return M_PI * r_ * r_;

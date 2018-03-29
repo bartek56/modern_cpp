@@ -34,8 +34,7 @@ void printAreas(const Collection& collection)
   }
 }
 
-
-void findFirstShapeMatchingPredicate(const Collection& collection, std::function <int (shared_ptr<Shape>)> s, std::string info)
+void findFirstShapeMatchingPredicate(const Collection& collection, std::function<int(shared_ptr<Shape>)> s, std::string info)
 {
   Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), s);
   if (*iter != nullptr)
@@ -52,7 +51,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection, std::function
 int main()
 {
   Collection shapes = {
-      make_shared<Circle>(2.0), make_shared<Circle>(3.0), make_shared<Rectangle>(10.0, 5.0),
+      make_shared<Circle>(2.0,Colors::BLUE), make_shared<Circle>(3.0), make_shared<Rectangle>(10.0, 5.0),
       make_shared<Square>(3.0), make_shared<Circle>(4.0),
   };
 
@@ -87,17 +86,16 @@ int main()
                                     return false;
                                   },
                                   "perimeter bigger than 20");
-		
 
-int value = 10;
-		findFirstShapeMatchingPredicate(shapes,
-                                 [&value](shared_ptr<Shape> s)->bool {
+  int value = 10;
+  findFirstShapeMatchingPredicate(shapes,
+                                  [&value](shared_ptr<Shape> s) -> bool {
                                     if (s)
                                     {
                                       return (s->getArea() < value);
                                     }
                                     return false;
-																		}	,
+                                  },
                                   "area less than " + std::to_string(value));
 
   return 0;

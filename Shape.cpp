@@ -1,9 +1,8 @@
 #include "Shape.hpp"
 #include <iostream>
 
-Shape::Shape(Colors c)
+Shape::Shape(Colors c):color(c)
 {
-  color = c;
 }
 
 void Shape::print() const
