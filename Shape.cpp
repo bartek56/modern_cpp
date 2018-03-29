@@ -3,7 +3,10 @@
 
 Shape::Shape(Colors c)
 {
-	color=c;
+  color = c;
 }
 
-void Shape::print() const { std::cout << "Unknown Shape" << std::endl; }
+void Shape::print() const
+{
+  std::cout << "Unknown Shape" << std::endl;
+}
